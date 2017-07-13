@@ -3,6 +3,7 @@ from random import randint
 import re
 from getpass import getpass
 import os
+import sys
 # Roll Dice Function
 def diceroll(x,y,z):
         print(x+'d'+y+z)
@@ -86,7 +87,7 @@ def application(dices):
 while True:
         try:
                 application(input("Roll Dice: "))
-                #blank = getpass("")
-                #break
+        except KeyboardInterrupt:
+                sys.exit()
         except:
                 print("Please use correct syntax (#d#+# )")
